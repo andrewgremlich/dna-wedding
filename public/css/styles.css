@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-first-color: #105377;
+  --primary-second-color: #dbb342;
+  --primary-third-color: #8f3912;
+
+  --secondary-first-color: #3a5745;
+  --secondary-second-color: #98e3b5;
+  --secondary-third-color: #76b08c;
+}
+
+@font-face {
+  font-family: "Alifiyah";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Alifiyah.otf");
+}
+
+@font-face {
+  font-family: "Zilla";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ZillaSlab-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Zilla";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/ZillaSlab-Light.ttf");
+}
+
+@font-face {
+  font-family: "Zilla";
+  font-style: italic;
+  font-weight: 200;
+  src: url("../fonts/ZillaSlab-LightItalic.ttf");
+}
+
+body {
+  background-color: var(--primary-first-color);
+}
+
+#backgroundImage {
+  background-image: url("../images/metal_texture_k_by_enframed.jpg");
+  opacity: 0.5;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+main {
+  position: absolute;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Alifiyah";
+}
+
+p,
+a,
+input,
+th,
+td {
+  font-family: "Zilla";
+}
+
+h1 {
+  font-size: 95px;
+  line-height: 190px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 40px;
+}
