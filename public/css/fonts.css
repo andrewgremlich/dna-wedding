@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Alifiyah";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Alifiyah.otf");
+}
+
+@font-face {
+  font-family: "Zilla";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ZillaSlab-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Zilla";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/ZillaSlab-Light.ttf");
+}
+
+@font-face {
+  font-family: "Zilla";
+  font-style: italic;
+  font-weight: 200;
+  src: url("../fonts/ZillaSlab-LightItalic.ttf");
+}

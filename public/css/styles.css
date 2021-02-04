@@ -1,3 +1,5 @@
+@import "./fonts.css";
+
 * {
   padding: 0;
   margin: 0;
@@ -12,34 +14,11 @@
   --secondary-first-color: #3a5745;
   --secondary-second-color: #98e3b5;
   --secondary-third-color: #76b08c;
-}
 
-@font-face {
-  font-family: "Alifiyah";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/Alifiyah.otf");
-}
+  --theme-white: #e9e9e9;
+  --theme-black: #1a1a1a;
 
-@font-face {
-  font-family: "Zilla";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/ZillaSlab-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Zilla";
-  font-style: normal;
-  font-weight: 200;
-  src: url("../fonts/ZillaSlab-Light.ttf");
-}
-
-@font-face {
-  font-family: "Zilla";
-  font-style: italic;
-  font-weight: 200;
-  src: url("../fonts/ZillaSlab-LightItalic.ttf");
+  --margin-bottom: 20px;
 }
 
 body {
@@ -47,17 +26,22 @@ body {
 }
 
 #backgroundImage {
-  background-image: url("../images/metal_texture_k_by_enframed.jpg");
-  opacity: 0.5;
+  background-image: url("../images/metal_texture.jpg");
+  opacity: 0.35;
   height: 100vh;
   width: 100vw;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 }
 
 main {
   position: absolute;
+  width: 100%;
+}
+
+main > div {
+  padding: 20px;
 }
 
 h1,
@@ -66,23 +50,110 @@ h3,
 h4,
 h5,
 h6 {
+  color: var(--theme-white);
   font-family: "Alifiyah";
+}
+
+p,
+figcaption,
+blockquote {
+  color: var(--theme-white);
 }
 
 p,
 a,
 input,
+figcaption,
+blockquote,
 th,
 td {
   font-family: "Zilla";
 }
 
 h1 {
-  font-size: 95px;
-  line-height: 190px;
+  font-size: 45px;
+  line-height: 90px;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 80px;
 }
 
 p {
-  font-size: 18px;
-  line-height: 40px;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: var(--margin-bottom);
+}
+
+figure {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+img {
+  width: 300px;
+  height: auto;
+}
+
+blockquote {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid var(--primary-second-color);
+}
+
+blockquote p {
+  margin-bottom: 10px;
+}
+
+a {
+  color: var(--primary-second-color);
+}
+
+a:visited,
+a:hover {
+  color: var(--secondary-third-color);
+}
+
+@media only screen and (min-width: 600px) {
+  #backgroundImage {
+    opacity: 0.15;
+  }
+
+  main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  main > div {
+    width: 70vw;
+  }
+
+  h1 {
+    font-size: 90px;
+    line-height: 120px;
+    margin-bottom: var(--margin-bottom);
+  }
+
+  h2 {
+    font-size: 80px;
+    line-height: 160px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  img {
+    width: 500px;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  main > div {
+    width: 40vw;
+  }
 }
