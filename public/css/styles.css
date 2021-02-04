@@ -87,7 +87,7 @@ p {
 }
 
 figure {
-  width: 100%;
+  width: 300px;
   margin-bottom: 40px;
 }
 
@@ -144,6 +144,10 @@ a:hover {
   p {
     font-size: 18px;
     line-height: 27px;
+  }
+
+  figure {
+    width: 500px;
   }
 
   img {
