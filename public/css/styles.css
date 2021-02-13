@@ -1,5 +1,3 @@
-@import "./fonts.css";
-
 * {
   padding: 0;
   margin: 0;
@@ -26,7 +24,7 @@ body {
 }
 
 #backgroundImage {
-  background-image: url("../images/metal_texture.jpg");
+  background-image: url("../images/metal_texture.webp");
   opacity: 0.35;
   height: 100vh;
   width: 100vw;
@@ -89,6 +87,7 @@ p {
 figure {
   width: 300px;
   margin-bottom: 40px;
+  padding-top: 30px;
 }
 
 img {
