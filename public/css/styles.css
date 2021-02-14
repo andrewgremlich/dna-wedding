@@ -50,6 +50,7 @@ h5,
 h6 {
   color: var(--theme-white);
   font-family: "Alifiyah";
+  margin-bottom: var(--margin-bottom);
 }
 
 p,
@@ -69,8 +70,7 @@ td {
 }
 
 h1 {
-  font-size: 45px;
-  line-height: 90px;
+  font-size: 60px;
 }
 
 h2 {
@@ -115,6 +115,20 @@ a:hover {
   color: var(--secondary-third-color);
 }
 
+#toc {
+  position: fixed;
+  left: 10px;
+  top: 20px;
+}
+
+#andrew {
+
+}
+
+#toc li {
+  list-style-type: none;
+}
+
 @media only screen and (min-width: 600px) {
   #backgroundImage {
     opacity: 0.15;
@@ -128,31 +142,6 @@ a:hover {
 
   main > div {
     width: 70vw;
-  }
-
-  h1 {
-    font-size: 90px;
-    line-height: 120px;
-    margin-bottom: var(--margin-bottom);
-  }
-
-  h2 {
-    font-size: 80px;
-    line-height: 160px;
-  }
-
-  p {
-    font-size: 18px;
-    line-height: 27px;
-  }
-
-  figure {
-    width: 500px;
-  }
-
-  img {
-    width: 500px;
-    height: auto;
   }
 }
 
