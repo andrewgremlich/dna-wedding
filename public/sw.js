@@ -3,12 +3,19 @@
  * https://gohugohq.com/howto/go-offline-with-service-worker/
  * http://www.favicomatic.com/
  */
-const CACHE = "wedding_announcement_cache_v1.1";
+const CACHE = "wedding_announcement_cache_v1.2";
 const CSS_PATH = "/css";
 const FONT_PATH = "/fonts";
 const IMG_PATH = "/images";
 
-const STYLE_FILES = [`${CSS_PATH}/fonts.css`, `${CSS_PATH}/styles.css`];
+const STYLE_FILES = [
+  `${FONT_PATH}/Alifiyah.otf`,
+  `${FONT_PATH}/ZillaSlab-LightItalic.ttf`,
+  `${FONT_PATH}/ZillaSlab-Light.ttf`,
+  `${FONT_PATH}/ZillaSlab-Regular.ttf`,
+  `${CSS_PATH}/fonts.css`,
+  `${CSS_PATH}/styles.css`,
+];
 
 const IMG_FILES = [
   `${IMG_PATH}/walk_in_the_park.webp`,

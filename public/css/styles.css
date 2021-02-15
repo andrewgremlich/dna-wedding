@@ -20,26 +20,81 @@
 }
 
 body {
-  background-color: var(--primary-first-color);
+  background: var(--primary-first-color);
 }
 
 #backgroundImage {
   background-image: url("../images/metal_texture.webp");
   opacity: 0.35;
-  height: 100vh;
-  width: 100vw;
+  height: 103vh;
+  width: 105vw;
+
   position: fixed;
   top: 0;
   left: 0;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+
+  background-color: var(--secondary-first-color);
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+nav p {
+  margin: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#tocClick {
+  cursor: pointer;
+}
+
+#toc {
+  position: absolute;
+  left: 0px;
+  top: 46px;
+
+  padding: 20px;
+  border-radius: 5px;
+
+  background-color: var(--secondary-second-color);
+}
+
+#toc li {
+  list-style-type: none;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+#toc a {
+  color: var(--primary-third-color);
+}
+
 main {
   position: absolute;
   width: 100%;
+
+  display: flex;
+  justify-content: center;
 }
 
-main > div {
-  padding: 20px;
+#contents {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 h1,
@@ -50,7 +105,6 @@ h5,
 h6 {
   color: var(--theme-white);
   font-family: "Alifiyah";
-  margin-bottom: var(--margin-bottom);
 }
 
 p,
@@ -70,24 +124,28 @@ td {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 50px;
+  margin-bottom: 30px;
+  color: var(--primary-second-color);
 }
 
 h2 {
-  font-size: 40px;
-  line-height: 80px;
+  font-size: 45px;
+
+  padding-top: 20px;
+  margin-bottom: 25px;
+
+  color: var(--primary-second-color);
 }
 
 p {
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 20px;
   margin-bottom: var(--margin-bottom);
 }
 
 figure {
   width: 300px;
-  margin-bottom: 40px;
-  padding-top: 30px;
+  margin-bottom: 20px;
 }
 
 img {
@@ -106,6 +164,19 @@ blockquote p {
   margin-bottom: 10px;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+
+  width: 100%;
+  height: 20px;
+}
+
+footer p {
+  font-size: 11px;
+}
+
 a {
   color: var(--primary-second-color);
 }
@@ -115,38 +186,26 @@ a:hover {
   color: var(--secondary-third-color);
 }
 
-#toc {
-  position: fixed;
-  left: 10px;
-  top: 20px;
-}
-
-#andrew {
-
-}
-
-#toc li {
-  list-style-type: none;
-}
-
 @media only screen and (min-width: 600px) {
-  #backgroundImage {
-    opacity: 0.15;
+  h1 {
+    font-size: 75px;
+    margin-bottom: 30px;
   }
 
-  main {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  h2 {
+    font-size: 60px;
+
+    padding-top: 20px;
+    margin-bottom: 25px;
   }
 
-  main > div {
+  #contents {
     width: 70vw;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  main > div {
+  #contents {
     width: 40vw;
   }
 }
