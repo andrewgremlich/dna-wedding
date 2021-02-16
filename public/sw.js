@@ -3,10 +3,11 @@
  * https://gohugohq.com/howto/go-offline-with-service-worker/
  * http://www.favicomatic.com/
  */
-const CACHE = "wedding_announcement_cache_v1.2";
+const CACHE = "wedding_announcement_cache_v1.4";
 const CSS_PATH = "/css";
 const FONT_PATH = "/fonts";
 const IMG_PATH = "/images";
+const SCRIPTS_PATH = "/scripts";
 
 const STYLE_FILES = [
   `${FONT_PATH}/Alifiyah.otf`,
@@ -19,7 +20,7 @@ const STYLE_FILES = [
 
 const IMG_FILES = [
   `${IMG_PATH}/walk_in_the_park.webp`,
-  `${IMG_PATH}/metal_texture.webp`,
+  `${IMG_PATH}/white_brushed_metal.webp`,
   `${IMG_PATH}/food_fight.webp`,
   `${IMG_PATH}/fair_fun.webp`,
   `${IMG_PATH}/christmas_tree.webp`,
@@ -32,6 +33,8 @@ const IMG_FILES = [
   `${IMG_PATH}/fancy_pose.webp`,
   `${IMG_PATH}/engaged_with_butterflies.webp`,
 ];
+
+const SCRIPT_FILES = ["index.js", `${SCRIPTS_PATH}/modules/Query.js`];
 
 self.addEventListener("install", (evt) =>
   evt.waitUntil(

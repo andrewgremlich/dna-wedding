@@ -8,14 +8,12 @@
       content="The wedding announcement page of Danielle Marie Bennett and Andrew Jacob Gremlich"
     />
 
-    <title>Wedding!</title>
+    <title>Wedding of Danielle Marie Bennett and Andrew Jacob Gremlich!</title>
 
     <link rel="stylesheet" href="./css/fonts.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <div id="backgroundImage"></div>
-
     <!-- 
       TODO:
       - improve the timeline a little bit with dates. "look like a timeline"
@@ -29,25 +27,26 @@
 
       - RSVP database (Actually don't do this here, to not publicize that information.)
      -->
-
-    <main>
+    <div id="navContents">
       <nav>
         <p id="tocClick">Table of Contents</p>
-
-        <div id="toc">
-          <p id="tocExit">x</p>
-          <ul>
-            <li><a href="#wedding">Getting Married!</a></li>
-            <li><a href="#timeline">Timeline</a></li>
-            <li><a href="#danielle">Thoughts from Danielle</a></li>
-            <li><a href="#andrew">Thoughts from Andrew</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#gift">Gift Registry</a></li>
-          </ul>
-        </div>
       </nav>
 
-      <div id="contents">
+      <div id="toc">
+        <p id="tocExit">x</p>
+        <ul>
+          <li><a href="#wedding">Getting Married!</a></li>
+          <li><a href="#timeline">Timeline</a></li>
+          <li><a href="#danielle">Thoughts from Danielle</a></li>
+          <li><a href="#andrew">Thoughts from Andrew</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#gift">Gift Registry</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <main>
+      <div>
         <div id="wedding">
           <h1>Getting Married</h1>
 
@@ -344,7 +343,7 @@
           <h2>Gift Registry</h2>
 
           <p>
-            Danielle and Andrew would be very grateful for any gifts to get
+            Danielle and Andrew would be very grateful for any gifts help to get
             their lives started together. They are registered in the following
             locations.
           </p>
@@ -368,12 +367,11 @@
           src="https://i.pinimg.com/236x/f1/07/0f/f1070ffa08e83f2e5d5dc5bbcb07044a--princess-bride-quotes-the-princess-bride-funny.jpg"
         /> -->
       </div>
-
-      <footer>
-        <p>Made by Andrew Gremlich, collaborated with Danielle Bennett.</p>
-      </footer>
     </main>
 
+    <footer>
+      <p>Made by Andrew Gremlich, collaborated with Danielle Bennett.</p>
+    </footer>
     <script src="./index.js" type="module"></script>
   </body>
 </html>
