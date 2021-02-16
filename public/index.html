@@ -10,8 +10,7 @@
 
     <title>Wedding of Danielle Marie Bennett and Andrew Jacob Gremlich!</title>
 
-    <link rel="stylesheet" href="./css/fonts.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/appStyles.css" />
   </head>
   <body>
     <!-- 
@@ -65,15 +64,23 @@
         <div id="timeline">
           <h2>Timeline</h2>
 
+          <p>Explore a timeline of Andrew and Danielle dating.</p>
+
           <!-- TODO: this will have to be JS to set a width that expands horizontal timeline scroll -->
-          <div id="interactiveTimeline"></div>
+          <div id="interactiveTimeline">
+            <div id="theTimeline">
+              <div class="timelineEvent"></div>
+            </div>
 
-          <p>
-            Celebrate Danielle and Andrew getting married by viewing their
-            timeline while dating!
-          </p>
+            <div id="timelineDisplay">
+              <p>
+                This is the display for the timeline of Danielle and Andrew
+                dating!
+              </p>
+            </div>
+          </div>
 
-          <p>
+          <!-- <p>
             As time passed early on in the relationship, Danielle and Andrew
             developed a firm and solid friendship. They learned how to enjoy
             spending time with each other by discussing a variety of topics that
@@ -111,7 +118,7 @@
             with goals that they could have individually and together. With
             these discussions, Danielle and Andrew gained more and more
             confidence in their commitment to each other.
-          </p>
+          </p> -->
 
           <!-- <h2 id="danielle">Thoughts from Danielle</h2> -->
         </div>
@@ -183,12 +190,7 @@
               width="500px"
               height="660px"
             />
-            <figcaption>
-              One of the first dates that Danielle and Andrew did together was
-              do a food fight. The food fight was an idea Andrew had as a
-              "penalty" for if Danielle came late to a date. Who do you think
-              won?
-            </figcaption>
+            <figcaption>A food fight done for a date activity</figcaption>
           </figure>
 
           <figure>
@@ -199,10 +201,7 @@
               width="500px"
               height="660px"
             />
-            <figcaption>
-              One of the fun dates that Danielle and Andrew had was going to the
-              fair.
-            </figcaption>
+            <figcaption>Date at the fair.</figcaption>
           </figure>
 
           <figure>
@@ -213,11 +212,7 @@
               width="500px"
               height="660px"
             />
-            <figcaption>
-              Danielle and Andrew also love going on walks and hikes for
-              exercise and exploration! Yes, Andrew does have a beard that he
-              has not very often.
-            </figcaption>
+            <figcaption>Walk in on the trail through Provo Canyon.</figcaption>
           </figure>
 
           <figure>
@@ -256,21 +251,8 @@
               height="660px"
             />
             <figcaption>
-              The highlight of the Zion National Park trip would have to be a
-              view from Observation point!
-            </figcaption>
-          </figure>
-
-          <figure>
-            <img
-              loading="lazy"
-              src="./images/christmas_tree.webp"
-              alt="Danielle standing next to their christmas tree."
-              width="500px"
-              height="660px"
-            />
-            <figcaption>
-              Danielle standing next to their christmas tree.
+              Danielle and Andrew posing at Observation Point in Zion National
+              Park.
             </figcaption>
           </figure>
 
@@ -307,9 +289,7 @@
               height="660px"
             />
             <figcaption>
-              Andrew did a dino hunt for his nephews birthday party. This was a
-              result of Andrew deciding to try something fun for his nephews
-              during the pandemic.
+              Andrew dressed in a dino costume for nephews' birthday party.
             </figcaption>
           </figure>
 
@@ -335,9 +315,7 @@
               alt="Danielle and Andrew went on a date to the Butterly Biosphere. They thought they could have a little fun with their commitment."
             />
             <figcaption>
-              Danielle and Andrew went on a date to the Butterly Biosphere. They
-              thought they could have a little fun with their commitment by
-              putting the butterfly rings on their left hand ring fingers!
+              On a date in the Butterfly Biosphere at Thanksgiving Point.
             </figcaption>
           </figure>
         </div>
@@ -370,9 +348,9 @@
           src="https://i.pinimg.com/236x/f1/07/0f/f1070ffa08e83f2e5d5dc5bbcb07044a--princess-bride-quotes-the-princess-bride-funny.jpg"
         /> -->
 
-          <div id="notes">
-            <p>Made by Andrew and collaborated with Danielle.</p>
-          </div>
+        <div id="notes">
+          <p>Made by Andrew and collaborated with Danielle.</p>
+        </div>
       </div>
     </main>
     <script src="./index.js" type="module"></script>

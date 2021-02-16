@@ -14,8 +14,7 @@ const STYLE_FILES = [
   `${FONT_PATH}/ZillaSlab-LightItalic.ttf`,
   `${FONT_PATH}/ZillaSlab-Light.ttf`,
   `${FONT_PATH}/ZillaSlab-Regular.ttf`,
-  `${CSS_PATH}/fonts.css`,
-  `${CSS_PATH}/styles.css`,
+  `${CSS_PATH}/appStyles.css`,
 ];
 
 const IMG_FILES = [
@@ -23,7 +22,6 @@ const IMG_FILES = [
   `${IMG_PATH}/white_brushed_metal.webp`,
   `${IMG_PATH}/food_fight.webp`,
   `${IMG_PATH}/fair_fun.webp`,
-  `${IMG_PATH}/christmas_tree.webp`,
   `${IMG_PATH}/andrew_patriarchs.webp`,
   `${IMG_PATH}/hole_in_the_wall.webp`,
   `${IMG_PATH}/zion_observation.webp`,
@@ -41,12 +39,16 @@ self.addEventListener("install", (evt) =>
     caches
       .open(CACHE)
       .then((cache) => cache.addAll(["/", ...STYLE_FILES, ...IMG_FILES]))
+      .catch((err) => console.error(err))
   )
 );
 
 self.addEventListener("fetch", (event) => {
   event.respondWith(
-    caches.match(event.request).then((resp) => resp || fetch(event.request))
+    caches
+      .match(event.request)
+      .then((resp) => resp || fetch(event.request))
+      .catch((err) => console.error(err))
   );
 });
 
@@ -57,5 +59,6 @@ self.addEventListener("activate", (evt) =>
       .then((keyList) =>
         Promise.all(keyList.map((key) => key !== CACHE && caches.delete(key)))
       )
+      .catch((err) => console.error(err))
   )
 );

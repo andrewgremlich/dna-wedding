@@ -1,0 +1,39 @@
+#interactiveTimeline {
+  height: 500px;
+  width: 100%;
+
+  position: relative;
+  left: 0;
+
+  background-color: var(--secondary-first-color);
+
+  overflow-x: scroll;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px var(--theme-black);
+}
+
+#theTimeline {
+  width: 10000px;
+  border-top: 3px solid var(--theme-black);
+  margin: 40px 0px;
+  position: relative;
+}
+
+#timelineDisplay {
+  padding: 20px;
+}
+
+/* when timeline appears do some sort of animation? */
+.timelineEvent {
+  height: 25px;
+  width: 25px;
+  background-color: var(--theme-black);
+  border-radius: 50%;
+  position: absolute;
+  top: -13px;
+  cursor: pointer;
+}
