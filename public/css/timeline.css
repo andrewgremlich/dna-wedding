@@ -1,22 +1,39 @@
 #timelineArea {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
+  width: 100vw;
+  display: block;
   margin-top: 40px;
   margin-bottom: 40px;
+
+  position: relative;
+  left: 0;
+}
+
+@media screen and (min-width: 600px) {
+  #timelineArea {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+    position: static;
+    width: 100%;
+  }
 }
 
 #timelineViewport {
-  width: 80%;
   min-height: 200px;
   background-color: var(--secondary-first-color);
-  border-radius: 5px;
   box-shadow: var(--box-shadow);
   overflow-x: scroll;
   overflow-y: hidden;
   display: flex;
   scroll-snap-type: x mandatory;
+}
+
+@media screen and (min-width: 600px) {
+  #timelineViewport {
+    border-radius: 0px;
+  }
 }
 
 .timelineDisplay {
@@ -27,14 +44,26 @@
   flex: 1 0 auto;
 }
 
+@media screen and (min-width: 600px) {
+  .timelineDisplay {
+    padding: 20px;
+  }
+}
+
 .svgArrow {
   width: 50px;
   height: 50px;
 }
 
 .navigateContainer {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  .navigateContainer {
+    display: flex;
+  }
 }

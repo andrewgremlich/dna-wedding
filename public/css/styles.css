@@ -47,8 +47,6 @@ main {
   width: 100%;
 
   padding-top: 100px;
-  padding-left: 10px;
-  padding-right: 10px;
   padding-bottom: 50px;
 
   background: rgba(16, 83, 119, 0.85);
@@ -67,6 +65,10 @@ main {
   main > div {
     width: 40vw;
   }
+}
+
+main > div > div {
+  width: 100%;
 }
 
 h1,
