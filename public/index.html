@@ -15,15 +15,11 @@
   <body>
     <!-- 
       TODO:
-      - improve the timeline a little bit with dates. "look like a timeline"
       - put photos in something like a gallery
-        - utilize and custom make a grid!
         - integrate photo sizes
         - links to photos to have them appear in timeline
       - Danielle's words
       - make it fun! graphics and animations
-
-      - RSVP database (Actually don't do this here, to not publicize that information.)
      -->
     <div id="navContents">
       <nav>
@@ -66,17 +62,79 @@
 
           <p>Explore a timeline of Andrew and Danielle dating.</p>
 
-          <!-- TODO: this will have to be JS to set a width that expands horizontal timeline scroll -->
-          <div id="interactiveTimeline">
-            <div id="theTimeline">
-              <div class="timelineEvent"></div>
-            </div>
+          <p>
+            To interact with the timeline, scroll horizontally with fingers or
+            arrows.
+          </p>
 
-            <div id="timelineDisplay">
-              <p>
-                This is the display for the timeline of Danielle and Andrew
-                dating!
-              </p>
+          <div id="timelineArea">
+            <div id="navigateLeft" class="navigateContainer">
+              <svg
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                stroke="white"
+                stroke-width="2"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="svgArrow"
+              >
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+            </div>
+            <div id="timelineViewport">
+              <div class="timelineDisplay">
+                <h3>28 June 2020</h3>
+                <p>
+                  Danielle throws a "social distancing" dinner and reaches out
+                  to Andrew to attend. Andrew attends the dinner and invites
+                  Danielle to a game night after the dinner.
+                </p>
+              </div>
+              <div class="timelineDisplay">
+                <h3>2 July 2020</h3>
+                <p>
+                  Danielle comes to the game night that Andrew hosts. Danielle
+                  stays after the game night. Andrew and Danielle talk for a
+                  couple hours.
+                </p>
+              </div>
+              <div class="timelineDisplay">
+                <h3>18 July 2020</h3>
+                <p>Danielle and Andrew and a group to go hike Timpanogos.</p>
+              </div>
+              <div class="timelineDisplay">
+                <h3>21 July 2020</h3>
+                <p>
+                  Danielle and Andrew do their first date to the cemetery to
+                  visit Grandparents Greene and Andrew's Mom.
+                </p>
+              </div>
+              <div class="timelineDisplay">
+                <h3>28 July 2020</h3>
+                <p>
+                  Danielle and Andrew do a hike date to Lower Bells Canyon
+                  waterfall.
+                </p>
+              </div>
+            </div>
+            <div id="navigateRight" class="navigateContainer">
+              <svg
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                stroke="white"
+                stroke-width="2"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="svgArrow"
+              >
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
             </div>
           </div>
 
@@ -349,7 +407,7 @@
         /> -->
 
         <div id="notes">
-          <p>Made by Andrew and collaborated with Danielle.</p>
+          <p>Made by Andrew with feedback from Danielle.</p>
         </div>
       </div>
     </main>
