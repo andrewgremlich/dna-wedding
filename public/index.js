@@ -1,4 +1,5 @@
 import Query from "./scripts/modules/Query.js";
+import { throttle } from "./scripts/modules/throttle.js";
 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("./sw.js");
@@ -28,13 +29,13 @@ exitTableOfContents.element.addEventListener("click", tocSlideInSlideOut);
 
 const style = window.getComputedStyle(timelineViewport.element);
 const width = style.width.replace("px", "");
-const widthAsNumber = Math.floor(width);
+const widthAsNumber = Math.ceil(width);
 let timelineScrollPosition = 0;
 
 leftNavigation.element.addEventListener("click", () => {
   const newScrollPosition = timelineScrollPosition;
 
-  if (newScrollPosition > 0) {
+  if (0 < newScrollPosition) {
     timelineScrollPosition -= widthAsNumber;
 
     timelineViewport.element.scroll({
@@ -47,11 +48,12 @@ leftNavigation.element.addEventListener("click", () => {
 
 rightNavigation.element.addEventListener("click", () => {
   const newScrollPosition = timelineScrollPosition + widthAsNumber;
+  const mostRightLengthRounded =
+    Math.ceil(timelineViewport.element.scrollWidth / 100) * 100;
+  const approachingRightLengthRounded =
+    Math.ceil((newScrollPosition + widthAsNumber) / 100) * 100;
 
-  if (
-    timelineViewport.element.scrollWidth - widthAsNumber >
-    newScrollPosition
-  ) {
+  if (approachingRightLengthRounded <= mostRightLengthRounded) {
     timelineScrollPosition = newScrollPosition;
 
     timelineViewport.element.scroll({

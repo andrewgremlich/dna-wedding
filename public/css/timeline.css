@@ -1,30 +1,21 @@
+#timeline {
+  width: 100%;
+}
+
 #timelineArea {
-  width: 100vw;
-  display: block;
+  width: 100%;
   margin-top: 40px;
   margin-bottom: 40px;
 
-  position: relative;
-  left: 0;
-}
-
-@media screen and (min-width: 600px) {
-  #timelineArea {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-
-    position: static;
-    width: 100%;
-  }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 #timelineViewport {
-  min-height: 200px;
   background-color: var(--secondary-first-color);
   box-shadow: var(--box-shadow);
-  overflow-x: scroll;
+  overflow-x: hidden;
   overflow-y: hidden;
   display: flex;
   scroll-snap-type: x mandatory;
@@ -37,11 +28,16 @@
 }
 
 .timelineDisplay {
-  padding: 20px;
+  padding: 15px;
   width: 100%;
   height: 100%;
   scroll-snap-align: start;
   flex: 1 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 600px) {
@@ -50,20 +46,27 @@
   }
 }
 
+.timelineDisplay h3,
+.timelineDisplay p {
+  margin: 0;
+  padding: 0;
+}
+
 .svgArrow {
   width: 50px;
   height: 50px;
 }
 
 .navigateContainer {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  padding: 0px;
 }
 
 @media screen and (min-width: 600px) {
   .navigateContainer {
-    display: flex;
+    padding: 10px;
   }
 }
