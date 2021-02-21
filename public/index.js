@@ -1,9 +1,5 @@
 import Query from "./scripts/modules/Query.js";
 
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("./sw.js");
-}
-
 const tableOfContentsClick = new Query("#tocClick");
 const tableOfContents = new Query("#toc");
 const exitTableOfContents = new Query("#tocExit");

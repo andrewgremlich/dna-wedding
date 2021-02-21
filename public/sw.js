@@ -3,18 +3,17 @@
  * https://gohugohq.com/howto/go-offline-with-service-worker/
  * http://www.favicomatic.com/
  */
-const CACHE = "wedding_announcement_cache_v1.6";
-const CSS_PATH = "/css";
+const CACHE = "wedding_announcement_cache_v1.7.1";
+
 const FONT_PATH = "/fonts";
 const IMG_PATH = "/images";
-const SCRIPTS_PATH = "/scripts";
 
 const STYLE_FILES = [
   `${FONT_PATH}/Alifiyah.otf`,
   `${FONT_PATH}/ZillaSlab-LightItalic.ttf`,
   `${FONT_PATH}/ZillaSlab-Light.ttf`,
   `${FONT_PATH}/ZillaSlab-Regular.ttf`,
-  `${CSS_PATH}/appStyles.css`,
+  `./dist/main.min.css`,
 ];
 
 const IMG_FILES = [
@@ -32,7 +31,7 @@ const IMG_FILES = [
   `${IMG_PATH}/engaged_with_butterflies.webp`,
 ];
 
-const SCRIPT_FILES = ["index.js", `${SCRIPTS_PATH}/modules/Query.js`];
+const SCRIPT_FILES = ["./dist/index.min.js"];
 
 self.addEventListener("install", (evt) =>
   evt.waitUntil(
