@@ -1,0 +1,24 @@
+{
+  "name": "wedding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel ./public/index.html",
+    "build": "parcel build ./public/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewgremlich/dna-wedding.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewgremlich/dna-wedding/issues"
+  },
+  "homepage": "https://github.com/andrewgremlich/dna-wedding#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.3.1"
+  }
+}

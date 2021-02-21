@@ -10,7 +10,7 @@
 
     <title>Wedding of Danielle Marie Bennett and Andrew Jacob Gremlich!</title>
 
-    <link rel="stylesheet" href="./css/appStyles.css" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <!-- 
@@ -134,16 +134,7 @@
               </div>
               <div class="timelineDisplay">
                 <h3>30 August 2020</h3>
-                <p>
-                  Danielle and Andrew kiss for the first time.
-                </p>
-              </div>
-            </div>
-              <div class="timelineDisplay">
-                <h3>September</h3>
-                <p>
-                  September entry events.
-                </p>
+                <p>Danielle and Andrew kiss for the first time.</p>
               </div>
             </div>
             <div id="navigateRight" class="navigateContainer">
@@ -272,8 +263,7 @@
                 loading="lazy"
                 src="./images/food_fight.webp"
                 alt="Danielle and Andrew messy after a food fight!"
-                width="500px"
-                height="660px"
+                width="100%"
               />
               <figcaption>A food fight done for a date activity</figcaption>
             </figure>
@@ -283,8 +273,7 @@
                 loading="lazy"
                 src="./images/fair_fun.webp"
                 alt="Danielle and Andrew having fun at the fair!"
-                width="500px"
-                height="660px"
+                width="100%"
               />
               <figcaption>Date at the fair.</figcaption>
             </figure>
@@ -294,8 +283,7 @@
                 loading="lazy"
                 src="./images/walk_in_the_park.webp"
                 alt="Danielle and Andrew walking in the park!"
-                width="500px"
-                height="660px"
+                width="100%"
               />
               <figcaption>
                 Walk in on the trail through Provo Canyon.
@@ -307,8 +295,7 @@
                 loading="lazy"
                 src="./images/andrew_patriarchs.webp"
                 alt="Andrew posing in front of the court of the patriarchs."
-                height="500px"
-                width="660px"
+                width="100%"
               />
               <figcaption>
                 Andrew posing in front of the Court of the Patriarchs in Zion
@@ -321,8 +308,7 @@
                 loading="lazy"
                 src="./images/hole_in_the_wall.webp"
                 alt="Danielle having fun with a seat in the wall."
-                height="500px"
-                width="660px"
+                width="100%"
               />
               <figcaption>
                 Danielle having fun with a seat in the wall.
@@ -334,8 +320,7 @@
                 loading="lazy"
                 src="./images/zion_observation.webp"
                 alt="Danielle and Andrew are entralled with the view from observation point!"
-                width="500px"
-                height="660px"
+                width="100%"
               />
               <figcaption>
                 Danielle and Andrew posing at Observation Point in Zion National
@@ -348,8 +333,7 @@
                 loading="lazy"
                 src="./images/bad_news_broken.webp"
                 alt="Danielle with the boot for her broken ankle."
-                width="500px"
-                height="660px"
+                width="100%"
               />
               <figcaption>
                 Danielle with the boot for her broken ankle.
@@ -361,8 +345,7 @@
                 loading="lazy"
                 src="./images/surgery.webp"
                 alt="Danielle prepping for surgery."
-                width="660px"
-                height="500px"
+                width="100%"
               />
               <figcaption>Danielle prepping for surgery.</figcaption>
             </figure>
@@ -372,8 +355,7 @@
                 loading="lazy"
                 src="./images/dino_hunt.webp"
                 alt="Andrew did a dino hunt for his nephews birthday party."
-                width="500px"
-                height="660px"
+                width="100%"
               />
               <figcaption>
                 Andrew dressed in a dino costume for nephews' birthday party.
@@ -385,8 +367,7 @@
                 loading="lazy"
                 src="./images/fancy_pose.webp"
                 alt="Danielle and Andrew like fun and fancy pictures."
-                width="500px"
-                height="660px"
+                width="100%"
               />
               <figcaption>
                 Danielle and Andrew like fun and fancy pictures.
@@ -395,8 +376,7 @@
 
             <figure>
               <img
-                width="500px"
-                height="660px"
+                width="100%"
                 loading="lazy"
                 src="./images/engaged_with_butterflies.webp"
                 alt="Danielle and Andrew went on a date to the Butterly Biosphere. They thought they could have a little fun with their commitment."
@@ -439,8 +419,30 @@
         <div id="notes">
           <p>Made by Andrew with feedback from Danielle.</p>
         </div>
+
+        <div id="imageModalShade">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            id="minimizeModal"
+          >
+            <polyline points="4 14 10 14 10 20"></polyline>
+            <polyline points="20 10 14 10 14 4"></polyline>
+            <line x1="14" y1="10" x2="21" y2="3"></line>
+            <line x1="3" y1="21" x2="10" y2="14"></line>
+          </svg>
+          <div id="imageModal">
+          </div>
+        </div>
       </div>
     </main>
-    <script src="./index.js" type="module"></script>
+    <script src="./index.js"></script>
   </body>
 </html>

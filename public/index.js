@@ -1,5 +1,4 @@
 import Query from "./scripts/modules/Query.js";
-import { throttle } from "./scripts/modules/throttle.js";
 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("./sw.js");
@@ -11,6 +10,9 @@ const exitTableOfContents = new Query("#tocExit");
 const leftNavigation = new Query("#navigateLeft");
 const rightNavigation = new Query("#navigateRight");
 const timelineViewport = new Query("#timelineViewport");
+const minimizeModal = new Query("#minimizeModal");
+const imageModal = new Query("#imageModal");
+const imageModalShade = new Query("#imageModalShade");
 
 const tocSlideInSlideOut = () => {
   const isOpen = tableOfContents.element.classList.contains("toc-slide-in");
@@ -24,8 +26,6 @@ const tocSlideInSlideOut = () => {
 tableOfContentsClick.element.addEventListener("click", tocSlideInSlideOut);
 
 exitTableOfContents.element.addEventListener("click", tocSlideInSlideOut);
-
-// TODO: Take into account the scroll position
 
 const style = window.getComputedStyle(timelineViewport.element);
 const width = style.width.replace("px", "");
@@ -62,4 +62,27 @@ rightNavigation.element.addEventListener("click", () => {
       behavior: "smooth",
     });
   }
+});
+
+imageModalShade.element.addEventListener("animationend", (evt) => {
+  if (evt.currentTarget.classList.contains("galleryFadeOut")) {
+    evt.currentTarget.classList.remove("galleryFadeOut");
+  }
+});
+
+minimizeModal.element.addEventListener("click", () => {
+  imageModalShade.element.classList.remove("galleryFadeIn");
+  imageModalShade.element.classList.add("galleryFadeOut");
+});
+
+document.querySelectorAll("#photos figure").forEach((figure) => {
+  figure.addEventListener("click", (evt) => {
+    const imageInModal = evt.currentTarget.cloneNode(true);
+
+    imageModalShade.element.classList.remove("galleryFadeOut");
+    imageModalShade.element.classList.add("galleryFadeIn");
+
+    imageModal.element.innerHTML = "";
+    imageModal.element.appendChild(imageInModal);
+  });
 });

@@ -1,0 +1,112 @@
+#imageModalShade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--faded-sec-first-color);
+  z-index: 10;
+
+  display: none;
+}
+
+#imageModalShade.galleryFadeIn {
+  display: block;
+  animation: fade-in 0.2s linear;
+}
+
+#imageModalShade.galleryFadeOut {
+  display: block;
+  animation: fade-out 0.2s linear;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#minimizeModal {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+
+  cursor: pointer;
+}
+
+#imageModal {
+  padding: 10px;
+}
+
+#imageModal figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#imageModal figcaption {
+  font-size: 20px;
+}
+
+#imageModal img {
+  width: 100%;
+  margin-bottom: 34px;
+
+  box-shadow: var(--box-shadow);
+}
+
+@media only screen and (min-width: 600px) {
+  #imageModal img {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #imageModal img {
+    width: 40%;
+  }
+}
+
+#gallery figure {
+  margin-bottom: 20px;
+}
+
+#gallery #photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#gallery img {
+  cursor: pointer;
+  object-fit: cover;
+
+  box-shadow: var(--box-shadow);
+}
+
+@media only screen and (min-width: 400px) {
+  #gallery img {
+    width: 200px;
+  }
+
+  #gallery figure {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+  }
+}
