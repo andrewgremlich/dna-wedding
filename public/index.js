@@ -4,7 +4,9 @@ const tableOfContentsClick = new Query("#tocClick");
 const tableOfContents = new Query("#toc");
 const exitTableOfContents = new Query("#tocExit");
 const leftNavigation = new Query("#navigateLeft");
+const leftNavigationSvg = new Query("#navigateLeft svg");
 const rightNavigation = new Query("#navigateRight");
+const rightNavigationSvg = new Query("#navigateRight svg");
 const timelineViewport = new Query("#timelineViewport");
 const minimizeModal = new Query("#minimizeModal");
 const imageModal = new Query("#imageModal");
@@ -28,8 +30,27 @@ const width = style.width.replace("px", "");
 const widthAsNumber = Math.ceil(width);
 let timelineScrollPosition = 0;
 
+const activateNavigationArrows = (newScrollPosition) => {
+  if (newScrollPosition >= timelineViewport.element.scrollWidth) {
+    rightNavigation.element.style.cursor = "not-allowed";
+    rightNavigationSvg.element.style.stroke = "#105377";
+  } else if (newScrollPosition <= widthAsNumber) {
+    leftNavigation.element.style.cursor = "not-allowed";
+    leftNavigationSvg.element.style.stroke = "#105377";
+  } else {
+    leftNavigation.element.style.cursor = "pointer";
+    leftNavigationSvg.element.style.stroke = "white";
+    rightNavigation.element.style.cursor = "pointer";
+    rightNavigationSvg.element.style.stroke = "white";
+  }
+};
+
+activateNavigationArrows(0);
+
 leftNavigation.element.addEventListener("click", () => {
   const newScrollPosition = timelineScrollPosition;
+
+  activateNavigationArrows(newScrollPosition);
 
   if (0 < newScrollPosition) {
     timelineScrollPosition -= widthAsNumber;
@@ -48,6 +69,8 @@ rightNavigation.element.addEventListener("click", () => {
     Math.ceil(timelineViewport.element.scrollWidth / 100) * 100;
   const approachingRightLengthRounded =
     Math.ceil((newScrollPosition + widthAsNumber) / 100) * 100;
+
+  activateNavigationArrows(approachingRightLengthRounded);
 
   if (approachingRightLengthRounded <= mostRightLengthRounded) {
     timelineScrollPosition = newScrollPosition;
