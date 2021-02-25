@@ -7,10 +7,10 @@
     "clean": "rm -rf ./public/dist/",
     "start": "./serve.sh",
     "build": "npm run build:script; npm run build:css",
-    "build:script": "esbuild ./public/index.js --bundle --minify --outfile=./public/dist/index.min.js",
+    "build:script": "esbuild ./public/scripts/index.ts --bundle --minify --outfile=./public/dist/index.min.js",
     "build:css": "postcss ./public/css/main.css --output ./public/dist/main.min.css",
     "dev": "npm run dev:script",
-    "dev:script": "esbuild ./public/index.js --bundle --minify --sourcemap --outfile=./public/dist/index.min.js",
+    "dev:script": "esbuild ./public/scripts/index.ts --bundle --minify --sourcemap --outfile=./public/dist/index.min.js",
     "dev:css": "postcss ./public/css/main.css --output --map ./public/dist/main.min.css"
   },
   "repository": {

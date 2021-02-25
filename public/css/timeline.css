@@ -40,6 +40,14 @@
   flex-direction: column;
 }
 
+.notAllowedNavigation {
+  cursor: not-allowed;
+}
+
+.blendInArrow {
+  stroke: #105377;
+}
+
 @media screen and (min-width: 600px) {
   .timelineDisplay {
     padding: 20px;
