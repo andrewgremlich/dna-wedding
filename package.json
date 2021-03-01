@@ -1,7 +1,8 @@
 {
   "name": "wedding",
+  "author": "Andrew Gremlich",
   "version": "1.0.0",
-  "description": "",
+  "description": "A website for Danielle Bennett and Andrew Gremlich",
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf ./public/dist/",
@@ -9,7 +10,7 @@
     "build": "npm run build:script; npm run build:css",
     "build:script": "esbuild ./public/scripts/index.ts --bundle --minify --outfile=./public/dist/index.min.js",
     "build:css": "postcss ./public/css/main.css --output ./public/dist/main.min.css",
-    "dev": "npm run dev:script",
+    "dev": "npm run dev:script; npm run dev:css",
     "dev:script": "esbuild ./public/scripts/index.ts --bundle --minify --sourcemap --outfile=./public/dist/index.min.js",
     "dev:css": "postcss ./public/css/main.css --output --map ./public/dist/main.min.css"
   },
@@ -17,9 +18,6 @@
     "type": "git",
     "url": "git+https://github.com/andrewgremlich/dna-wedding.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/andrewgremlich/dna-wedding/issues"
   },

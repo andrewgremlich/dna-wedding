@@ -89,10 +89,6 @@
   flex-direction: column;
 }
 
-#imageModal figcaption {
-  width: 100%;
-}
-
 @media only screen and (min-width: 600px) {
   #imageModal figure {
     width: 70%;
@@ -101,22 +97,28 @@
 
 @media only screen and (min-width: 1000px) {
   #imageModal figure {
-    width: 50%;
+    max-width: 500px;
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  #imageModal figure {
+    max-height: 95%;
+    margin: auto;
+  }
+  #imageModal img {
+    max-height: 100%;
+    width: auto;
+  }
+  #imageModal figcaption {
+    width: 100%;
   }
 }
 
 #imageModal figcaption {
+  width: 100%;
   font-size: 20px;
 }
-/* 
-#imageModal img {
-
-  margin-bottom: 34px;
-
-  box-shadow: var(--box-shadow);
-}
-
- */
 
 #gallery figure {
   margin-bottom: 20px;
