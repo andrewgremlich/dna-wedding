@@ -7,7 +7,7 @@
 :root {
   --primary-first-color: #105377;
   --primary-second-color: #dbb342;
-  --primary-third-color: #8f3912;
+  --primary-third-color: #8e1c12;
 
   --secondary-first-color: #3a5745;
   --secondary-second-color: #98e3b5;
@@ -58,7 +58,7 @@ main > div {
 
 @media only screen and (min-width: 1200px) {
   main > div {
-    width: 40vw;
+    max-width: 600px;
   }
 }
 

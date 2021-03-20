@@ -103,7 +103,7 @@
 
 @media only screen and (max-height: 650px) {
   #imageModal figure {
-    max-height: 95%;
+    max-height: 80%;
     margin: auto;
   }
   #imageModal img {

@@ -3,3 +3,9 @@
 @import "./gallery.css";
 @import "./nav.css";
 @import "./timeline.css";
+
+.colorStyleBlock {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
