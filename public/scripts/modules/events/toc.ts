@@ -17,4 +17,9 @@ export const activateTableOfContents = (): void => {
   tableOfContentsClick?.addEventListener("click", tocSlideInSlideOut);
 
   exitTableOfContents?.addEventListener("click", tocSlideInSlideOut);
+
+  document.querySelector("main")?.addEventListener("click", (data) => {
+    tableOfContents?.classList.remove("toc-slide-in");
+    tableOfContents?.classList.add("toc-slide-out");
+  });
 };
