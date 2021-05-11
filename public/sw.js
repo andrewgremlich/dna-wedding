@@ -3,7 +3,7 @@
  * https://gohugohq.com/howto/go-offline-with-service-worker/
  * http://www.favicomatic.com/
  */
-const CACHE = "wedding_announcement_cache_v1.9.5";
+const CACHE = "wedding_announcement_cache_v1.9.6";
 
 const FONT_PATH = "/fonts";
 const IMG_PATH = "/images";
